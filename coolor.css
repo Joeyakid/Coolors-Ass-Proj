@@ -1,5 +1,6 @@
 .screen1{
     height: 100vh;
+    width: 100vw;
 }
 nav{
     display: flex;
@@ -87,16 +88,138 @@ a{
     border-radius: 6px;
     }
 }
+.right2{
+       img{
+        width: 300px;
+        position: relative;
+        right: 300px;
+        top: 140px;
+        border: 6px solid black;
+    border-radius: 6px;
+       }
+}
+.whatsapp{
+    position: fixed;
+    z-index: 1000;
+    img{
+       width: 80px;
+       position: relative;
+       top: 230px;
+       left: 1100px;
+    }
+}
 
 
 
 
 .screen-2{
     height: 100vh;
+    margin-top: 60px;
+    width: 100vw;
     .apps{
-        width: 250px;
-        height: 300px;
-        border: 1px solid green;
+        width: 220px;
+        height: 280px;
+        background-color: whitesmoke;
+        border-radius: 8px;
     }
 }
-
+.box-5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.apps{
+    img{
+        width: 60px;
+        text-align: center;
+        position: relative;
+        left: 80px;
+        
+    }
+    .default{
+        display: block;
+    }
+    .non-default{
+        display: none;
+        h1{
+            position: relative;
+            bottom: -120px;
+            text-align: center;
+         }
+    }
+    h2{
+        text-align: center;
+    }
+    p{
+        width: 130px;
+        text-align: center;
+        position: relative;
+        left: 40px;
+    }
+}
+.apps:hover {
+    background-color: aquamarine;
+}
+.apps:hover .default{
+    display: none;
+}
+.apps:hover .non-default{
+display: block;
+transition: all 360ms;
+}
+.head3{
+    text-align: center;
+    position: relative;
+    top: 60px;
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    img{
+        width: 70px;
+        position: relative;
+        top: 120px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    .windows{
+        text-align: center;
+        position: relative;
+        left: 580px;
+        top: 20px;
+    }
+}
+.icons img:hover{
+        transform: translateY(-15px) scale(1.2);
+}
+.footer{
+    display: flex;
+    height: 80vh;
+    gap: 170px;
+    position: relative;
+    top: 40px;
+    left: 90px;
+}
+@media screen and (max-width: 768px){
+    .screen-1 {
+        flex-direction: column;
+        width: 500px;
+    }
+    .screen-2 {
+        flex-direction: column;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .icons{
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
